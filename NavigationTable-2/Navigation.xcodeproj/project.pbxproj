@@ -68,7 +68,6 @@
 		0DDD9EBC2721B1F900BA69C0 /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDD9EBE2721B1F900BA69C0 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		0DDD9EBF2721B1F900BA69C0 /* StorageService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StorageService.docc; sourceTree = "<group>"; };
-		0DDD9ECC2721B1F900BA69C0 /* StorageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceTests.swift; sourceTree = "<group>"; };
 		CE61D63E2659E198001C600D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE61D6422659E1A8001C600D /* ProfileHeaderVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderVIew.swift; sourceTree = "<group>"; };
 		CE61D66D266628F2001C600D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 			children = (
 				060782B0250CE27700A87020 /* Navigation */,
 				0DDD9EBD2721B1F900BA69C0 /* StorageService */,
-				0DDD9ECB2721B1F900BA69C0 /* StorageServiceTests */,
 				060782AF250CE27700A87020 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,14 +141,6 @@
 				0DDD9EBF2721B1F900BA69C0 /* StorageService.docc */,
 			);
 			path = StorageService;
-			sourceTree = "<group>";
-		};
-		0DDD9ECB2721B1F900BA69C0 /* StorageServiceTests */ = {
-			isa = PBXGroup;
-			children = (
-				0DDD9ECC2721B1F900BA69C0 /* StorageServiceTests.swift */,
-			);
-			path = StorageServiceTests;
 			sourceTree = "<group>";
 		};
 		CE61D63D2659E186001C600D /* Profile */ = {
