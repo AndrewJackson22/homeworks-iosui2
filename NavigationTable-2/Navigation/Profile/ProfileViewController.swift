@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StorageService
 
 class ProfileViewController: UIViewController {
     
@@ -16,12 +17,18 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpTableView()
     }
     
     private func setUpTableView() {
         view.addSubview(tableView)
+        
+        #if DEBUG
+        tableView.backgroundColor = .purple
+        #else
+        tableView.backgroundColor = .green
+        #endif
+        
         tableView.toAutoLayout()
         tableView.dataSource = self
         tableView.delegate = self
