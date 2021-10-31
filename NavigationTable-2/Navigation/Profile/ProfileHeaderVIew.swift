@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ProfileHeaderView: UIView {
     
@@ -81,34 +82,31 @@ class ProfileHeaderView: UIView {
 
         self.addSubviews(userPicture, userName, userStatus, setStatus, statusButton)
 
-        let constraints = [
-            userPicture.topAnchor.constraint(equalTo: self.topAnchor, constant: baseInset),
-            userPicture.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: baseInset),
-            userPicture.heightAnchor.constraint(equalToConstant: 110),
-            userPicture.widthAnchor.constraint(equalTo: userPicture.heightAnchor),
-            
-            userName.topAnchor.constraint(equalTo: self.topAnchor, constant: 27),
-            userName.leadingAnchor.constraint(equalTo: userPicture.trailingAnchor, constant: baseInset),
-            userName.heightAnchor.constraint(equalToConstant: 18),
-            
-            statusButton.topAnchor.constraint(equalTo: userPicture.bottomAnchor, constant: 32),
-            statusButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: baseInset),
-            statusButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -baseInset),
-            statusButton.heightAnchor.constraint(equalToConstant: 50),
-            statusButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -baseInset),
-            
-            setStatus.leadingAnchor.constraint(equalTo: userPicture.trailingAnchor, constant: baseInset),
-            setStatus.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -baseInset),
-            setStatus.bottomAnchor.constraint(equalTo: statusButton.topAnchor, constant: -10),
-            setStatus.heightAnchor.constraint(equalToConstant: 40),
-            
-            userStatus.leadingAnchor.constraint(equalTo: userPicture.trailingAnchor, constant: baseInset),
-            userStatus.bottomAnchor.constraint(equalTo: setStatus.topAnchor, constant: -10),
-            userStatus.heightAnchor.constraint(equalToConstant: 14)
-        
-        ]
-        
-        NSLayoutConstraint.activate(constraints)
+        userPicture.snp.makeConstraints { make in
+            make.top.leading.equalToSuperview().inset(baseInset)
+            make.height.width.equalTo(110)
+        }
+        userName.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(27)
+            make.leading.equalTo(userPicture.snp.trailing).offset(baseInset)
+            make.height.equalTo(18)
+        }
+        statusButton.snp.makeConstraints { make in
+            make.top.equalTo(userPicture.snp.bottom).offset(32)
+            make.leading.trailing.bottom.equalToSuperview().inset(baseInset)
+            make.height.equalTo(50)
+        }
+        setStatus.snp.makeConstraints { make in
+            make.leading.equalTo(userPicture.snp.trailing).offset(baseInset)
+            make.trailing.equalToSuperview().inset(baseInset)
+            make.bottom.equalTo(statusButton.snp.top).offset(-10)
+            make.height.equalTo(40)
+        }
+        userStatus.snp.makeConstraints { make in
+            make.leading.equalTo(userPicture.snp.trailing).offset(baseInset)
+            make.bottom.equalTo(setStatus.snp.top).offset(-10)
+            make.height.equalTo(14)
+        }
     }
     
     private var baseInset: CGFloat { return 16 }
