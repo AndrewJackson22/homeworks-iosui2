@@ -16,6 +16,9 @@
 		060782C6250CEB0A00A87020 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782C5250CEB0A00A87020 /* InfoViewController.swift */; };
 		060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782C7250CEE5D00A87020 /* PostViewController.swift */; };
 		0D09CFFE272EE7C900915B4C /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 0D09CFFD272EE7C900915B4C /* iOSIntPackage */; };
+		0DA2CE0F2733F6A9005295CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2CE0E2733F6A9005295CB /* User.swift */; };
+		0DA2CE112733F6F7005295CB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2CE102733F6F7005295CB /* UserService.swift */; };
+		0DA2CE1327394C1F005295CB /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2CE1227394C1F005295CB /* TestUserService.swift */; };
 		0DDD9EC02721B1F900BA69C0 /* StorageService.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0DDD9EBF2721B1F900BA69C0 /* StorageService.docc */; };
 		0DDD9ECE2721B1F900BA69C0 /* StorageService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DDD9EBE2721B1F900BA69C0 /* StorageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DDD9ED12721B1F900BA69C0 /* StorageService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDD9EBC2721B1F900BA69C0 /* StorageService.framework */; };
@@ -67,6 +70,9 @@
 		060782C5250CEB0A00A87020 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		060782C7250CEE5D00A87020 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		060782C9250CEE7200A87020 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0DA2CE0E2733F6A9005295CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0DA2CE102733F6F7005295CB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		0DA2CE1227394C1F005295CB /* TestUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
 		0DDD9EBC2721B1F900BA69C0 /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDD9EBE2721B1F900BA69C0 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		0DDD9EBF2721B1F900BA69C0 /* StorageService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StorageService.docc; sourceTree = "<group>"; };
@@ -169,6 +175,9 @@
 				CE61D6E42671E035001C600D /* ProfileTableHeaderView.swift */,
 				CE61D66D266628F2001C600D /* LogInViewController.swift */,
 				CE61D687266898F4001C600D /* PostTableViewCell.swift */,
+				0DA2CE0E2733F6A9005295CB /* User.swift */,
+				0DA2CE102733F6F7005295CB /* UserService.swift */,
+				0DA2CE1227394C1F005295CB /* TestUserService.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA2CE1327394C1F005295CB /* TestUserService.swift in Sources */,
 				060782B6250CE27700A87020 /* FeedViewController.swift in Sources */,
 				CE61D6E52671E035001C600D /* ProfileTableHeaderView.swift in Sources */,
 				060782B2250CE27700A87020 /* AppDelegate.swift in Sources */,
@@ -352,8 +362,10 @@
 				CE61D63F2659E198001C600D /* ProfileViewController.swift in Sources */,
 				060782B4250CE27700A87020 /* SceneDelegate.swift in Sources */,
 				CE61D688266898F4001C600D /* PostTableViewCell.swift in Sources */,
+				0DA2CE112733F6F7005295CB /* UserService.swift in Sources */,
 				060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */,
 				CE61D6432659E1A8001C600D /* ProfileHeaderVIew.swift in Sources */,
+				0DA2CE0F2733F6A9005295CB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

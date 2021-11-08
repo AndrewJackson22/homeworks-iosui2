@@ -13,12 +13,34 @@ class ProfileViewController: UIViewController {
     
     private let tableView = UITableView(frame: .zero, style: .grouped)
     private let cellId = "cellId"
+    let profileHeaderView = ProfileHeaderView()
     private let arrayOfPosts = PostWall.tableViewPost
+    let userService: UserService
+    let name: String
 
+    init(userService: UserService, name: String) {
+        self.userService = userService
+        self.name = name
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        showUserData()
+        
     }
+    private func showUserData() {
+            if let user = self.userService.findNameHuman(name: self.name) {
+                profileHeaderView.userName.text = user.name
+                profileHeaderView.userPicture.image = user.image
+                profileHeaderView.userStatus.text = user.status
+            }
+        }
     
     private func setUpTableView() {
         view.addSubview(tableView)
@@ -72,7 +94,7 @@ extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         switch section {
-        case 0: let headerView = ProfileTableHeaderView()
+        case 0: let headerView = profileHeaderView
             return headerView
         default:
             return nil

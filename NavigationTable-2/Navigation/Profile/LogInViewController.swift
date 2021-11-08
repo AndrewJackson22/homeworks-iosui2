@@ -11,7 +11,8 @@ import UIKit
 class LogInViewController: UIViewController {
     
     private let scrollView = UIScrollView()
-    
+    let currentUser = CurrentUserService()
+    let testUser = TestUserService()
     private let logInView: UIView = {
         let logInView = UIView()
         logInView.backgroundColor = .white
@@ -97,8 +98,26 @@ class LogInViewController: UIViewController {
     }()
     
     @objc private func tapLogInButton() {
-        let profileVC = storyboard?.instantiateViewController(identifier: "ProfileVC")
-        navigationController?.pushViewController(profileVC!, animated: true)
+//        let profileVC = storyboard?.instantiateViewController(identifier: "ProfileVC")
+//        navigationController?.pushViewController(profileVC!, animated: true)
+        
+        #if DEBUG
+        
+        if let userName = emailTextField.text, let _ = testUser.findNameHuman(name: userName) {
+            let profileVC = ProfileViewController(userService: testUser, name: userName)
+            navigationController?.pushViewController(profileVC, animated: true)
+        } else {
+            showAlert()
+        }
+        #else
+        if let userName = emailTextField.text, let _ = currentUser.findNameHuman(name: userName) {
+            let profileVC = ProfileViewController(userService: currentUser, name: userName)
+            navigationController?.pushViewController(profileVC, animated: true)
+        } else {
+            showAlert()
+        }
+        #endif
+        
     }
     
     override func viewDidLoad() {
@@ -108,8 +127,17 @@ class LogInViewController: UIViewController {
         setupViews()
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
     }
     
+    private func showAlert() {
+           let alertController = UIAlertController(title: "ERROR", message: "User name is invalid", preferredStyle: .alert)
+           let cancelAction = UIAlertAction(title: "Chancel", style: .default) { _ in
+           }
+           alertController.addAction(cancelAction)
+           self.present(alertController, animated: true, completion: nil)
+           print("invalid name")
+       }
     private func setupViews() {
         
         scrollView.toAutoLayout()
