@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol LogInViewControllerDelegate: AnyObject {
+    func checkerTextField(email: String, pswd: String) -> Bool
+}
+
 class LogInViewController: UIViewController {
+    
+    // Delegate and Singleton 4.1
+    weak var delgate: LogInViewControllerDelegate?
     
     private let scrollView = UIScrollView()
     let currentUser = CurrentUserService()
@@ -100,24 +107,19 @@ class LogInViewController: UIViewController {
     @objc private func tapLogInButton() {
 //        let profileVC = storyboard?.instantiateViewController(identifier: "ProfileVC")
 //        navigationController?.pushViewController(profileVC!, animated: true)
-        
         #if DEBUG
-        
-        if let userName = emailTextField.text, let _ = testUser.findNameHuman(name: userName) {
-            let profileVC = ProfileViewController(userService: testUser, name: userName)
-            navigationController?.pushViewController(profileVC, animated: true)
-        } else {
-            showAlert()
-        }
+        let userService = TestUserService()
         #else
-        if let userName = emailTextField.text, let _ = currentUser.findNameHuman(name: userName) {
-            let profileVC = ProfileViewController(userService: currentUser, name: userName)
-            navigationController?.pushViewController(profileVC, animated: true)
-        } else {
-            showAlert()
-        }
+        let userService = CurrentUserService()
         #endif
         
+        if let userName = emailTextField.text, delgate?.checkerTextField(email: userName, pswd: passwordTextField.text ?? "") == true {
+            let profileVc = ProfileViewController(userService: userService, name: userName)
+            navigationController?.pushViewController(profileVc, animated: true)
+        } else {
+            showAlert()
+        }
+       
     }
     
     override func viewDidLoad() {
@@ -131,7 +133,7 @@ class LogInViewController: UIViewController {
     }
     
     private func showAlert() {
-           let alertController = UIAlertController(title: "ERROR", message: "User name is invalid", preferredStyle: .alert)
+           let alertController = UIAlertController(title: "ERROR", message: "email and pswd Error", preferredStyle: .alert)
            let cancelAction = UIAlertAction(title: "Chancel", style: .default) { _ in
            }
            alertController.addAction(cancelAction)
@@ -237,3 +239,5 @@ extension LogInViewController: UITextFieldDelegate {
         return true
     }
 }
+
+

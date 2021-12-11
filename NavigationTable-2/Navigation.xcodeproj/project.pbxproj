@@ -16,6 +16,7 @@
 		060782C6250CEB0A00A87020 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782C5250CEB0A00A87020 /* InfoViewController.swift */; };
 		060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782C7250CEE5D00A87020 /* PostViewController.swift */; };
 		0D09CFFE272EE7C900915B4C /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 0D09CFFD272EE7C900915B4C /* iOSIntPackage */; };
+		0D8BF7A72764DB2A0065C0B9 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BF7A62764DB2A0065C0B9 /* LoginInspector.swift */; };
 		0DA2CE0F2733F6A9005295CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2CE0E2733F6A9005295CB /* User.swift */; };
 		0DA2CE112733F6F7005295CB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2CE102733F6F7005295CB /* UserService.swift */; };
 		0DA2CE1327394C1F005295CB /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2CE1227394C1F005295CB /* TestUserService.swift */; };
@@ -26,6 +27,7 @@
 		0DDD9EDA2721B25300BA69C0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782C9250CEE7200A87020 /* Post.swift */; };
 		0DDD9EDB2721B26000BA69C0 /* PostStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D68326687C92001C600D /* PostStorage.swift */; };
 		0DDD9EDC2721B27300BA69C0 /* PostTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D67D26687C22001C600D /* PostTable.swift */; };
+		0DE48C0327550949000F4EC3 /* Cheker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE48C0227550948000F4EC3 /* Cheker.swift */; };
 		157349DE4795E96F0E9D3BBC /* Pods_Navigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893DFA4C7AE4A93010F878A4 /* Pods_Navigation.framework */; };
 		CE61D63F2659E198001C600D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D63E2659E198001C600D /* ProfileViewController.swift */; };
 		CE61D6432659E1A8001C600D /* ProfileHeaderVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61D6422659E1A8001C600D /* ProfileHeaderVIew.swift */; };
@@ -70,12 +72,14 @@
 		060782C5250CEB0A00A87020 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		060782C7250CEE5D00A87020 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		060782C9250CEE7200A87020 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0D8BF7A62764DB2A0065C0B9 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		0DA2CE0E2733F6A9005295CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0DA2CE102733F6F7005295CB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0DA2CE1227394C1F005295CB /* TestUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
 		0DDD9EBC2721B1F900BA69C0 /* StorageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StorageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DDD9EBE2721B1F900BA69C0 /* StorageService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StorageService.h; sourceTree = "<group>"; };
 		0DDD9EBF2721B1F900BA69C0 /* StorageService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StorageService.docc; sourceTree = "<group>"; };
+		0DE48C0227550948000F4EC3 /* Cheker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheker.swift; sourceTree = "<group>"; };
 		893DFA4C7AE4A93010F878A4 /* Pods_Navigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Navigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5C45021F5C0C9D5579F10D /* Pods-Navigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navigation.release.xcconfig"; path = "Target Support Files/Pods-Navigation/Pods-Navigation.release.xcconfig"; sourceTree = "<group>"; };
 		CE61D63E2659E198001C600D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				0DA2CE0E2733F6A9005295CB /* User.swift */,
 				0DA2CE102733F6F7005295CB /* UserService.swift */,
 				0DA2CE1227394C1F005295CB /* TestUserService.swift */,
+				0DE48C0227550948000F4EC3 /* Cheker.swift */,
+				0D8BF7A62764DB2A0065C0B9 /* LoginInspector.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA2CE1327394C1F005295CB /* TestUserService.swift in Sources */,
+				0DE48C0327550949000F4EC3 /* Cheker.swift in Sources */,
 				060782B6250CE27700A87020 /* FeedViewController.swift in Sources */,
 				CE61D6E52671E035001C600D /* ProfileTableHeaderView.swift in Sources */,
 				060782B2250CE27700A87020 /* AppDelegate.swift in Sources */,
@@ -364,6 +371,7 @@
 				CE61D688266898F4001C600D /* PostTableViewCell.swift in Sources */,
 				0DA2CE112733F6F7005295CB /* UserService.swift in Sources */,
 				060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */,
+				0D8BF7A72764DB2A0065C0B9 /* LoginInspector.swift in Sources */,
 				CE61D6432659E1A8001C600D /* ProfileHeaderVIew.swift in Sources */,
 				0DA2CE0F2733F6A9005295CB /* User.swift in Sources */,
 			);
