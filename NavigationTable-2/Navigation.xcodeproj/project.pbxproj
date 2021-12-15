@@ -16,6 +16,7 @@
 		060782C6250CEB0A00A87020 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782C5250CEB0A00A87020 /* InfoViewController.swift */; };
 		060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060782C7250CEE5D00A87020 /* PostViewController.swift */; };
 		0D09CFFE272EE7C900915B4C /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 0D09CFFD272EE7C900915B4C /* iOSIntPackage */; };
+		0D475615276A348400B7ED51 /* LogInFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D475614276A348400B7ED51 /* LogInFactory.swift */; };
 		0D8BF7A72764DB2A0065C0B9 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BF7A62764DB2A0065C0B9 /* LoginInspector.swift */; };
 		0DA2CE0F2733F6A9005295CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2CE0E2733F6A9005295CB /* User.swift */; };
 		0DA2CE112733F6F7005295CB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2CE102733F6F7005295CB /* UserService.swift */; };
@@ -72,6 +73,7 @@
 		060782C5250CEB0A00A87020 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		060782C7250CEE5D00A87020 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		060782C9250CEE7200A87020 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0D475614276A348400B7ED51 /* LogInFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInFactory.swift; sourceTree = "<group>"; };
 		0D8BF7A62764DB2A0065C0B9 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		0DA2CE0E2733F6A9005295CB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0DA2CE102733F6F7005295CB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				0DA2CE1227394C1F005295CB /* TestUserService.swift */,
 				0DE48C0227550948000F4EC3 /* Cheker.swift */,
 				0D8BF7A62764DB2A0065C0B9 /* LoginInspector.swift */,
+				0D475614276A348400B7ED51 /* LogInFactory.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				060782C8250CEE5D00A87020 /* PostViewController.swift in Sources */,
 				0D8BF7A72764DB2A0065C0B9 /* LoginInspector.swift in Sources */,
 				CE61D6432659E1A8001C600D /* ProfileHeaderVIew.swift in Sources */,
+				0D475615276A348400B7ED51 /* LogInFactory.swift in Sources */,
 				0DA2CE0F2733F6A9005295CB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

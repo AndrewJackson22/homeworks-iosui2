@@ -17,6 +17,8 @@ class LogInViewController: UIViewController {
     // Delegate and Singleton 4.1
     weak var delgate: LogInViewControllerDelegate?
     
+    var logInFactory: MyLogInFactory?
+    
     private let scrollView = UIScrollView()
     let currentUser = CurrentUserService()
     let testUser = TestUserService()
@@ -113,9 +115,16 @@ class LogInViewController: UIViewController {
         let userService = CurrentUserService()
         #endif
         
-        if let userName = emailTextField.text, delgate?.checkerTextField(email: userName, pswd: passwordTextField.text ?? "") == true {
-            let profileVc = ProfileViewController(userService: userService, name: userName)
-            navigationController?.pushViewController(profileVc, animated: true)
+//        if let userName = emailTextField.text, delgate?.checkerTextField(email: userName, pswd: passwordTextField.text ?? "") == true {
+//            let profileVc = ProfileViewController(userService: userService, name: userName)
+//            navigationController?.pushViewController(profileVc, animated: true)
+//        } else {
+//            showAlert()
+//        }
+        // 4.2 Factory
+        if let username = emailTextField.text, let inspector = logInFactory?.loginMyFactory(), inspector.checkerTextField(email: username, pswd: passwordTextField.text ?? "") == true {
+            let profileVC = ProfileViewController(userService: userService, name: username)
+            navigationController?.pushViewController(profileVC, animated: true)
         } else {
             showAlert()
         }
