@@ -15,7 +15,7 @@ protocol LogInViewControllerDelegate: AnyObject {
 class LogInViewController: UIViewController {
     
     // Delegate and Singleton 4.1
-    weak var delgate: LogInViewControllerDelegate?
+    weak var delegate: LogInViewControllerDelegate?
     
     var logInFactory: MyLogInFactory?
     
@@ -230,17 +230,6 @@ class LogInViewController: UIViewController {
     }
 }
 
-extension UIView {
-    func toAutoLayout() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-    }
-}
-
-extension UIView {
-    func addSubviews(_ subviews: UIView...) {
-        subviews.forEach { addSubview($0) }
-    }
-}
 
 extension LogInViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
